@@ -1,28 +1,203 @@
-# Waze-Churn-Project-Analysis
-Leverages Waze customer data and user behavior patterns to predict churn risk, identify users who are most likely to disengage, and uncover key factors that may influence retention. This enables teams to proactively target at-risk users and develop data-driven strategies to improve customer retention.
+# Waze User Churn Analysis
 
-Course 1 Activity: Waze User Churn Project | Preliminary Data Summary
+## Overview
 
-Overview
-The Waze team is seeking to understand the factors that influence user churn, and develop a predictive model to identify users at risk of leaving the platform. Through exploratory data analysis, feature engineering and machine learning, key drivers of churn can help generate actionable business recommendations aimed at improving user retention.
+This project analyzes user behavior and engagement patterns to understand the factors associated with **user churn on the Waze platform**.
 
-Project Status
-* Currently, we are in the early stages of understanding data
-* Understanding data, checking descriptive statistics for each column
-* Looking at breakdowns of users who churned vs. users who haven’t churned, to see which variables may provide more insights.
-* Feature engineering: Developing new features from the current data
+The project follows an end-to-end data analytics workflow, including:
 
-Next Steps
-* Research the reason why churned users may have driven more km and more minutes driven
-* Create graphs, histograms, and plots to discover more insights into relationships between variables
-* Look into km per driving day, as churned users had a significantly higher median of km/driving days
+* Loading and exploring data in Python
+* Data cleaning and preparation
+* Exploratory Data Analysis (EDA)
+* Feature engineering
+* Statistical hypothesis testing
+* Predictive modeling
+* Business insights and recommendations
+* Creating an executive report and PowerPoint presentation
 
-Key Insights
-* There were 700 null rows, each without the label status of the row
-* 64% of users own iphones, 36% own Androids
-* Churned users had more km driven and minutes drove, but for some reason, less driving and activity days.
-* Km per drive: the retained users median was 75, churned users median = 74
-* Km per driving day: Churned users = 697.5, retained = 289.5 km/driving day
-* Iphone and Android ratio for churned and retained was both 64% and 36%, which may indicate that this doesn’t have an effect on whether users churn
+The overall goal was to identify patterns associated with churn and provide insights that could support future **user retention strategies and churn prediction efforts**.
+
+---
+
+## Dataset
+
+The dataset contains information about Waze users and their app activity, including behavioral and engagement metrics.
+
+Key variables analyzed included:
+
+* Driving activity
+* Activity days
+* Number of drives
+* Number of sessions
+* Kilometers driven
+* Driving duration
+* Device type (iPhone vs. Android)
+* User churn status
+
+The initial data review identified **700 rows without a churn label**, which required consideration during the data preparation process.
+
+---
+
+## Tools & Technologies
+
+* **Python**
+* **Pandas** – Data manipulation and analysis
+* **NumPy** – Numerical analysis
+* **Matplotlib / Seaborn** – Data visualization
+* **Scikit-learn** – Statistical analysis and machine learning
+* **Jupyter Notebook** – Analysis and documentation
+* **PowerPoint** – Executive presentation and communication
+
+---
+
+## Project Steps
+
+### 1. Data Loading & Understanding
+
+* Loaded the dataset into Python.
+* Reviewed the structure and data types.
+* Examined descriptive statistics.
+* Identified missing values and potential data-quality issues.
+* Compared users who churned with users who were retained.
+
+### 2. Data Cleaning
+
+* Investigated missing values.
+* Addressed rows without churn labels.
+* Reviewed distributions and potential outliers.
+* Prepared the dataset for exploratory analysis and modeling.
+
+### 3. Exploratory Data Analysis
+
+Analyzed relationships between user engagement and churn using:
+
+* Histograms
+* Distribution plots
+* Comparative visualizations
+* Churn-rate analysis
+* Behavioral metrics
+
+The analysis found that the number of sessions and drives had a **right-skewed distribution**, with most users having relatively low activity and a smaller number of highly active users.
+
+### 4. Feature Engineering
+
+Created additional behavioral features to better understand user engagement and improve predictive modeling.
+
+Examples included:
+
+* Kilometers per hour
+* Kilometers per driving day
+* Total sessions per day
+* Percentage of sessions in the last month
+* Professional driver indicator
+* Other user engagement ratios
+
+These engineered features were later evaluated for their importance in predicting churn.
+
+### 5. Statistical Analysis
+
+A two-sample t-test was performed to investigate whether iPhone and Android users differed significantly in their average number of drives.
+
+**Result:**
+
+* t-statistic: **1.46**
+* p-value: **0.143**
+* Significance level: **0.05**
+
+Since the p-value was greater than 0.05, the analysis did not find statistically significant evidence that device type was associated with differences in the average number of drives.
+
+### 6. Predictive Modeling
+
+Multiple classification approaches were explored to predict user churn.
+
+#### Logistic Regression
+
+A logistic regression model was developed to estimate the probability of user churn.
+
+Performance:
+
+* **Precision:** 54.9%
+* **Recall:** 9.86%
+
+Activity days was identified as one of the most important variables, with greater activity generally associated with lower churn. The low recall indicated that the model was not effective enough to identify most users who actually churned.
+
+#### Random Forest & XGBoost
+
+Random Forest and XGBoost models were subsequently developed and evaluated using train, validation, and test datasets.
+
+XGBoost performed better than Random Forest across the reported evaluation metrics. However, the model achieved approximately:
+
+* **Accuracy:** 80%
+* **Recall:** 18%
+* **F1 Score:** 24%
+
+The results suggested that additional training data and features would be needed before using the model for important business decisions.
+
+---
+
+## Key Results & Insights
+
+Several important patterns emerged from the analysis:
+
+* **Activity days were strongly associated with churn**, with higher activity generally corresponding to lower churn.
+* **Churn rates tended to increase as mean daily driving distance increased.**
+* The number of drives and sessions was **right-skewed**, with most users having relatively low activity and a small number of highly active users.
+* Churned users showed higher median kilometers per driving day than retained users.
+* The iPhone/Android split was approximately **64% iPhone and 36% Android**, and the analysis did not find statistically significant evidence that device type affected average driving activity.
+* XGBoost outperformed Random Forest in the reported model evaluation.
+* The predictive models were useful for identifying patterns and potential churn drivers, but additional features and training data would be needed for stronger predictive performance.
+
+---
+
+## Business Impact
+
+The analysis provides a foundation for understanding user engagement and identifying potential churn-risk factors.
+
+The findings can help inform:
+
+* User retention strategies
+* Product and feature improvements
+* Customer engagement initiatives
+* Future churn prediction models
+* Additional analysis of user activity trends
+
+The project also demonstrates the ability to translate technical analysis into **business-focused insights and recommendations**.
+
+---
+
+## Deliverables
+
+This project includes:
+
+* Python/Jupyter notebooks for data analysis
+* Exploratory data analysis and visualizations
+* Data cleaning and feature engineering
+* Statistical hypothesis testing
+* Machine learning models
+* Executive analysis/report
+* PowerPoint presentation for communicating findings
+
+---
+
+## Future Improvements
+
+Potential next steps include:
+
+* Adding additional behavioral features
+* Analyzing drives per activity day
+* Analyzing sessions per day
+* Measuring navigation and activity ratios
+* Examining weekday vs. weekend behavior
+* Analyzing changes in user activity over time
+* Testing additional machine learning algorithms
+* Increasing the amount of training data
+* Improving model recall for identifying users at risk of churn
+
+---
+
+## Skills Demonstrated
+
+**Data Analytics | Python | Pandas | NumPy | Data Cleaning | Exploratory Data Analysis | Data Visualization | Feature Engineering | Statistical Testing | Machine Learning | Logistic Regression | Random Forest | XGBoost | Business Insights | Data Storytelling | PowerPoint**
+
 
 
