@@ -67,7 +67,49 @@ The initial data review identified **700 rows without a churn label**, which req
 * Reviewed distributions and potential outliers.
 * Prepared the dataset for exploratory analysis and modeling.
 
-### 3. Exploratory Data Analysis
+### 3. SQL Analysis
+
+A dedicated MySQL analysis was performed to answer business questions about user churn and engagement.
+
+The SQL analysis focused on using queries to segment users, calculate churn rates, compare retained vs. churned users, and identify behavioral patterns.
+
+Key SQL Analyses
+Overall Churn Rate
+
+Calculated the number and percentage of retained and churned users.
+
+This provided a baseline understanding of the overall churn distribution.
+
+Sessions & User Engagement
+
+Compared average total sessions between retained and churned users.
+
+The analysis found that churned users had a slightly higher average number of total sessions than retained users, demonstrating that higher overall session volume does not necessarily correspond to lower churn.
+
+Activity-Day Segmentation
+
+Users were grouped according to the number of active days:
+
+0–5
+6–10
+11–15
+16–20
+21–26
+Greater than 26
+
+Observed churn rates decreased as activity days increased:
+
+Activity Days	Churn Rate
+0–5	36.23%
+6–10	25.21%
+11–15	16.80%
+16–20	10.53%
+21–26	7.10%
+>26	4.53%
+
+This analysis suggested a strong relationship between consistent app usage and lower churn.
+
+### 4. Exploratory Data Analysis
 
 Analyzed relationships between user engagement and churn using:
 
@@ -79,7 +121,7 @@ Analyzed relationships between user engagement and churn using:
 
 The analysis found that the number of sessions and drives had a **right-skewed distribution**, with most users having relatively low activity and a smaller number of highly active users.
 
-### 4. Feature Engineering
+### 5. Feature Engineering
 
 Created additional behavioral features to better understand user engagement and improve predictive modeling.
 
@@ -94,7 +136,7 @@ Examples included:
 
 These engineered features were later evaluated for their importance in predicting churn.
 
-### 5. Statistical Analysis
+### 6. Statistical Analysis
 
 A two-sample t-test was performed to investigate whether iPhone and Android users differed significantly in their average number of drives.
 
@@ -106,7 +148,7 @@ A two-sample t-test was performed to investigate whether iPhone and Android user
 
 Since the p-value was greater than 0.05, the analysis did not find statistically significant evidence that device type was associated with differences in the average number of drives.
 
-### 6. Predictive Modeling
+### 7. Predictive Modeling
 
 Multiple classification approaches were explored to predict user churn.
 
@@ -133,9 +175,27 @@ XGBoost performed better than Random Forest across the reported evaluation metri
 
 The results suggested that additional training data and features would be needed before using the model for important business decisions.
 
+8. Power BI Dashboard
+
+The analysis was also translated into an interactive Power BI dashboard to communicate churn patterns visually.
+
+The dashboard was designed to make the analysis more accessible to non-technical stakeholders and provide an interactive way to explore relationships between user behavior and churn.
+
+Dashboard Analysis Included
+Retained vs. churned user percentages
+Churn by activity-day groups
+Churn by onboarding-age groups
+User engagement metrics
+Sessions and driving behavior
+Device distribution
+Behavioral segmentation
+Churn-rate comparisons
+
+Power BI was used to transform the analytical results into business-facing visualizations and allow users to interact with different segments of the dataset.
+
 ---
 
-## Key Results & Insights
+## 9.Key Results & Insights
 
 Several important patterns emerged from the analysis:
 
@@ -165,39 +225,50 @@ The project also demonstrates the ability to translate technical analysis into *
 
 ---
 
-## Deliverables
+Deliverables
 
-This project includes:
+The project includes:
 
-* Python/Jupyter notebooks for data analysis
-* Exploratory data analysis and visualizations
-* Data cleaning and feature engineering
-* Statistical hypothesis testing
-* Machine learning models
-* Executive analysis/report
-* PowerPoint presentation for communicating findings
-
----
-
-## Future Improvements
+Python/Jupyter notebooks
+Data cleaning and preparation
+Exploratory data analysis
+SQL analysis and business questions
+SQL feature engineering
+Statistical hypothesis testing
+Machine learning models
+Power BI dashboard
+Data visualizations
+Executive analysis/report
+PowerPoint presentation
+Future Improvements
 
 Potential next steps include:
 
-* Adding additional behavioral features
-* Analyzing drives per activity day
-* Analyzing sessions per day
-* Measuring navigation and activity ratios
-* Examining weekday vs. weekend behavior
-* Analyzing changes in user activity over time
-* Testing additional machine learning algorithms
-* Increasing the amount of training data
-* Improving model recall for identifying users at risk of churn
+Data & Feature Engineering
+Add additional behavioral features
+Analyze drives per activity day
+Analyze sessions per day
+Measure navigation and activity ratios
+Examine weekday vs. weekend behavior
+Analyze changes in user activity over time
+Create engagement trend features
+SQL & BI
+Expand the Power BI dashboard with additional interactive filters
+Create user-engagement segments
+Develop more detailed churn cohorts
+Build KPI cards for executive reporting
+Add drill-through functionality for user segments
+Create time-based behavioral analysis
+Machine Learning
+Increase the amount of training data
+Address class imbalance
+Test additional classification algorithms
+Perform hyperparameter tuning
+Improve feature selection
+Optimize recall for identifying users at risk of churn
+Evaluate additional metrics such as ROC-AUC and PR-AUC
+Skills Demonstrated
 
----
-
-## Skills Demonstrated
-
-**Data Analytics | Python | Pandas | NumPy | Data Cleaning | Exploratory Data Analysis | Data Visualization | Feature Engineering | Statistical Testing | Machine Learning | Logistic Regression | Random Forest | XGBoost | Business Insights | Data Storytelling | PowerPoint**
-
+Data Analytics | Python | SQL | MySQL | Pandas | NumPy | Data Cleaning | Exploratory Data Analysis | Data Visualization | Power BI | Feature Engineering | Statistical Testing | Hypothesis Testing | Machine Learning | Logistic Regression | Random Forest | XGBoost | Business Intelligence | Business Insights | Data Storytelling | Executive Reporting | PowerPoint
 
 
