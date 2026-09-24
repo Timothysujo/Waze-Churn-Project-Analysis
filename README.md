@@ -2,20 +2,15 @@
 
 ## Overview
 
-This project analyzes user behavior and engagement patterns to understand the factors associated with **user churn on the Waze platform**.
+This project analyzes user behavior and engagement patterns to identify factors associated with user churn on the Waze platform.
 
-The project follows an end-to-end data analytics workflow, including:
+The project follows an end-to-end data analytics workflow, combining Python, SQL, Power BI, statistical analysis, and machine learning to move from raw data exploration to business-focused insights.
 
-* Loading and exploring data in Python
-* Data cleaning and preparation
-* Exploratory Data Analysis (EDA)
-* Feature engineering
-* Statistical hypothesis testing
-* Predictive modeling
-* Business insights and recommendations
-* Creating an executive report and PowerPoint presentation
+The overall goal was to understand how user engagement, driving behavior, onboarding age, device type, and other behavioral characteristics relate to churn, while developing a foundation for future churn prediction and retention strategies.
 
-The overall goal was to identify patterns associated with churn and provide insights that could support future **user retention strategies and churn prediction efforts**.
+#### End-to-End Workflow
+
+Data → Python EDA → SQL Analysis → Feature Engineering → Statistical Testing → Machine Learning → Power BI Dashboard → Business Insights
 
 ---
 
