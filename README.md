@@ -195,7 +195,7 @@ Power BI was used to transform the analytical results into business-facing visua
 
 ---
 
-### 9.Key Results & Insights
+### 9. Key Results & Insights
 
 Several important patterns emerged from the analysis:
 
@@ -227,7 +227,7 @@ The project also demonstrates the ability to translate technical analysis into *
 
 ## Deliverables
 
-The project includes:
+#### The project includes:
 
 * Python/Jupyter notebooks
 * Data cleaning and preparation
@@ -242,7 +242,7 @@ The project includes:
 * PowerPoint presentation
 * Future Improvements
 
-Potential next steps include:
+#### Potential next steps include:
 
 * Data & Feature Engineering
 * Add additional behavioral features
@@ -268,7 +268,7 @@ Potential next steps include:
 * Optimize recall for identifying users at risk of churn
 * Evaluate additional metrics such as ROC-AUC and PR-AUC
 
-Skills Demonstrated
+#### Skills Demonstrated
 
 Data Analytics | Python | SQL | MySQL | Pandas | NumPy | Data Cleaning | Exploratory Data Analysis | Data Visualization | Power BI | Feature Engineering | Statistical Testing | Hypothesis Testing | Machine Learning | Logistic Regression | Random Forest | XGBoost | Business Intelligence | Business Insights | Data Storytelling | Executive Reporting | PowerPoint
 
