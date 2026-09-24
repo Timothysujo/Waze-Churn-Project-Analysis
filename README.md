@@ -175,27 +175,27 @@ XGBoost performed better than Random Forest across the reported evaluation metri
 
 The results suggested that additional training data and features would be needed before using the model for important business decisions.
 
-8. Power BI Dashboard
+### 8. Power BI Dashboard
 
 The analysis was also translated into an interactive Power BI dashboard to communicate churn patterns visually.
 
 The dashboard was designed to make the analysis more accessible to non-technical stakeholders and provide an interactive way to explore relationships between user behavior and churn.
 
-Dashboard Analysis Included
-Retained vs. churned user percentages
-Churn by activity-day groups
-Churn by onboarding-age groups
-User engagement metrics
-Sessions and driving behavior
-Device distribution
-Behavioral segmentation
-Churn-rate comparisons
+* Dashboard Analysis Included
+* Retained vs. churned user percentages
+* Churn by activity-day groups
+* Churn by onboarding-age groups
+* User engagement metrics
+* Sessions and driving behavior
+* Device distribution
+* Behavioral segmentation
+* Churn-rate comparisons
 
 Power BI was used to transform the analytical results into business-facing visualizations and allow users to interact with different segments of the dataset.
 
 ---
 
-## 9.Key Results & Insights
+### 9.Key Results & Insights
 
 Several important patterns emerged from the analysis:
 
@@ -225,48 +225,49 @@ The project also demonstrates the ability to translate technical analysis into *
 
 ---
 
-Deliverables
+## Deliverables
 
 The project includes:
 
-Python/Jupyter notebooks
-Data cleaning and preparation
-Exploratory data analysis
-SQL analysis and business questions
-SQL feature engineering
-Statistical hypothesis testing
-Machine learning models
-Power BI dashboard
-Data visualizations
-Executive analysis/report
-PowerPoint presentation
-Future Improvements
+* Python/Jupyter notebooks
+* Data cleaning and preparation
+* Exploratory data analysis
+* SQL analysis and business questions
+* SQL feature engineering
+* Statistical hypothesis testing
+* Machine learning models
+* Power BI dashboard
+* Data visualizations
+* Executive analysis/report
+* PowerPoint presentation
+* Future Improvements
 
 Potential next steps include:
 
-Data & Feature Engineering
-Add additional behavioral features
-Analyze drives per activity day
-Analyze sessions per day
-Measure navigation and activity ratios
-Examine weekday vs. weekend behavior
-Analyze changes in user activity over time
-Create engagement trend features
-SQL & BI
-Expand the Power BI dashboard with additional interactive filters
-Create user-engagement segments
-Develop more detailed churn cohorts
-Build KPI cards for executive reporting
-Add drill-through functionality for user segments
-Create time-based behavioral analysis
-Machine Learning
-Increase the amount of training data
-Address class imbalance
-Test additional classification algorithms
-Perform hyperparameter tuning
-Improve feature selection
-Optimize recall for identifying users at risk of churn
-Evaluate additional metrics such as ROC-AUC and PR-AUC
+* Data & Feature Engineering
+* Add additional behavioral features
+* Analyze drives per activity day
+* Analyze sessions per day
+* Measure navigation and activity ratios
+* Examine weekday vs. weekend behavior
+* Analyze changes in user activity over time
+* Create engagement trend features
+* SQL & BI
+* Expand the Power BI dashboard with additional interactive filters
+* Create user-engagement segments
+* Develop more detailed churn cohorts
+* Build KPI cards for executive reporting
+* Add drill-through functionality for user segments
+* Create time-based behavioral analysis
+* Machine Learning
+* Increase the amount of training data
+* Address class imbalance
+* Test additional classification algorithms
+* Perform hyperparameter tuning
+* Improve feature selection
+* Optimize recall for identifying users at risk of churn
+* Evaluate additional metrics such as ROC-AUC and PR-AUC
+
 Skills Demonstrated
 
 Data Analytics | Python | SQL | MySQL | Pandas | NumPy | Data Cleaning | Exploratory Data Analysis | Data Visualization | Power BI | Feature Engineering | Statistical Testing | Hypothesis Testing | Machine Learning | Logistic Regression | Random Forest | XGBoost | Business Intelligence | Business Insights | Data Storytelling | Executive Reporting | PowerPoint
